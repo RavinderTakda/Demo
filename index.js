@@ -1,8 +1,9 @@
 const express = require("express");
-
+require("dotenv").config()
 
 const app = express();
-app.use(express.json());
+
+const PORT =process.env.PORT || 8500
 
 
 app.get("/", (req, res) => {
@@ -11,12 +12,14 @@ app.get("/", (req, res) => {
 
 
 //SERVER RUNNING
+
+
+
+
+
+
 app.listen( 8000, () => {
-  try {
 
     console.log("Connection to DB success");
-  } catch (error) {
-
-  }
-
+    
 });
